@@ -13,7 +13,7 @@ const ExercisesList = ({ exercises, setExercises, bodyPart }) => {
 
         const fetchedExercises = async () => {
             
-            let exerciseData = []
+            let exerciseData = [];
 
             if(bodyPart === 'all') {
                 exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
@@ -22,7 +22,7 @@ const ExercisesList = ({ exercises, setExercises, bodyPart }) => {
                 exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
             }
 
-            setExercises(exerciseData);
+            setExercises(exerciseData || []);
         };
 
         fetchedExercises();

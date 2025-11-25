@@ -10,7 +10,7 @@ import ExercisesList from '../components/ExercisesList';
 const Home = () => {
 
   
-  const [bodyPart, setBodyPart] = useState("all");   // To Set a User Selected BodyPart in BodyPart.jsx
+  const [bodyPart, setBodyPart] = useState('all');   // To Set a User Selected BodyPart in BodyPart.jsx
   const [exercises, setExercises] = useState([]);
 
   return (

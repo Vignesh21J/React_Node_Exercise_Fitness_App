@@ -8,9 +8,9 @@ import HorizontalScrollBar from './HorizontalScrollBar';
 
 
 
-const BodyPartFilter = ({ bodyPart ,setBodyPart }) => {
+const BodyPartFilter = ({ bodyPart, setBodyPart }) => {
 
-  const [bodyParts, setBodyParts] = useState("all");
+  const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
 
@@ -58,7 +58,7 @@ const BodyPartFilter = ({ bodyPart ,setBodyPart }) => {
           
         */}
 
-        <HorizontalScrollBar items = {bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        <HorizontalScrollBar items={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
 
         
       </Box>

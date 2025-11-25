@@ -34,7 +34,7 @@ app.get('/api/image/:id', async (req, res) => {
         const cachedBase64 = await redis.get(cachedKey);
 
         if(cachedBase64) {
-            console.log("Serving from CACHE: ", cachedKey);
+            console.log("Serving from CACHE: ");
 
             const gifBuffered = Buffer.from(cachedBase64, "base64");
             res.setHeader("Content-Type", "image/gif");
