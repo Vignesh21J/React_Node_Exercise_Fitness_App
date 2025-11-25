@@ -5,6 +5,7 @@ import HeroBanner from '../components/HeroBanner'
 import { Box } from '@mui/material';
 
 import BodyPartFilter from '../components/BodyPartFilter';
+import ExercisesList from '../components/ExercisesList';
 
 const Home = () => {
 
@@ -17,6 +18,8 @@ const Home = () => {
         <HeroBanner />
 
         <BodyPartFilter bodyPart={bodyPart} setBodyPart={setBodyPart} />
+
+        <ExercisesList exercises={exercises} setExercises={setExercises} bodyPart={bodyPart} />  {/* Selected Body Part will go in this component */}
     </Box>
   )
 }
